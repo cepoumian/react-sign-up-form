@@ -1,0 +1,39 @@
+:root {
+  --color-pink: #ff7979;
+  --color-green: #38cc8b;
+  --color-purple: #5e54a4;
+  --color-gray: #3d3b48;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1rem = 10px, 10px/16px = 0.625 = 62.5% */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #fff;
+  background-color: var(--color-pink);
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
