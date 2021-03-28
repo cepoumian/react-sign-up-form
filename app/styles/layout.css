@@ -1,0 +1,29 @@
+.page-container {
+  min-height: inherit;
+  min-width: inherit;
+  background: url("../images/bg-intro-desktop.png");
+  background-size: cover;
+  padding: 16.5rem;
+}
+
+.row {
+  max-width: 114rem;
+  display: flex;
+  justify-content: space-between;
+
+  height: 50rem; /* TESTING */
+}
+
+.column {
+  flex: 0 0 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.column:first-child {
+  justify-content: center;
+}
+
+.column:nth-child(2) {
+  /* margin-left: 5rem; */
+}

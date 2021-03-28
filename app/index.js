@@ -1,10 +1,25 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
+import "./styles/index.css";
+
+import HeroMessage from "./components/HeroMessage";
+import CtaButton from "./components/CtaButton";
 
 class App extends React.Component {
   render() {
-    return <h1>All set!</h1>;
+    return (
+      <div className="page-container">
+        <div className="row">
+          <div className="column">
+            <HeroMessage></HeroMessage>
+          </div>
+          <div className="column">
+            <CtaButton></CtaButton>
+            {/* <TrialForm></TrialForm> */}
+          </div>
+        </div>
+      </div>
+    );
   }
 }
 
