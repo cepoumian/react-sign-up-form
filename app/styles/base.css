@@ -4,6 +4,8 @@
   --color-green: #38cc8b;
   --color-purple: #5e54a4;
   --color-gray: #3d3b48;
+  --color-gray-light: #979797;
+  --color-gray-xlight: #dedede;
 }
 
 * {

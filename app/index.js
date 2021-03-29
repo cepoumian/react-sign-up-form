@@ -4,6 +4,7 @@ import "./styles/index.css";
 
 import HeroMessage from "./components/HeroMessage";
 import CtaButton from "./components/CtaButton";
+import Form from "./components/Form";
 
 class App extends React.Component {
   render() {
@@ -15,7 +16,7 @@ class App extends React.Component {
           </div>
           <div className="column">
             <CtaButton></CtaButton>
-            {/* <TrialForm></TrialForm> */}
+            <Form></Form>
           </div>
         </div>
       </div>
