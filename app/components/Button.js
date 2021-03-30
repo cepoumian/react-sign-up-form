@@ -4,7 +4,7 @@ export default class Button extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      type: "",
+      choice: "",
     };
     this.setButtonStyle = this.setButtonStyle.bind(this);
   }
@@ -14,12 +14,12 @@ export default class Button extends React.Component {
   }
 
   setButtonStyle() {
-    this.setState({ type: this.props.type });
+    this.setState({ choice: this.props.choice });
   }
 
   render() {
     return (
-      <button className={`btn btn-${this.state.type}`}>{this.props.children}</button>
+      <button className={`btn btn-${this.state.choice}`}>{this.props.children}</button>
     );
   }
 }
