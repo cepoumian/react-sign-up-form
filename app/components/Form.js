@@ -33,59 +33,114 @@ export default class Form extends React.Component {
     event.preventDefault();
     const isValid = this.validate();
     if (isValid) {
-      console.log(this.state);
       this.setState(initialState);
     }
   }
 
   render() {
+    const {
+      firstName,
+      firstNameError,
+      lastName,
+      lastNameError,
+      email,
+      emailError,
+      password,
+      passwordError,
+    } = this.state;
+
     return (
       <form className="form" onSubmit={this.handleSubmit}>
         <input
           type="text"
           name="firstName"
-          className="form__input"
+          className={`
+          form__input
+          ${firstNameError && "form__input--invalid"}
+          ${firstName.length > 1 && "form__input--valid"}
+          `}
           autoComplete="off"
           placeholder="First Name"
           onChange={this.handleChange}
-          value={this.state.firstName}
+          value={firstName}
         />
 
-        <div className="form__errorMessage">{this.state.firstNameError}</div>
+        <div
+          className={`
+              form__errorMessage
+              ${firstName.length > 1 && "form__errorMessage--hide"}
+              `}
+        >
+          {firstNameError}
+        </div>
 
         <input
           type="text"
           name="lastName"
-          className="form__input"
+          className={`
+          form__input 
+          ${lastNameError && "form__input--invalid"}
+          ${lastName.length > 1 && "form__input--valid"}
+          `}
           autoComplete="off"
           placeholder="Last Name"
           onChange={this.handleChange}
-          value={this.state.lastName}
+          value={lastName}
         />
-        <div className="form__errorMessage">{this.state.lastNameError}</div>
+        <div
+          className={`
+              form__errorMessage
+              ${lastName.length > 1 && "form__errorMessage--hide"}
+              `}
+        >
+          {lastNameError}
+        </div>
 
         <input
           type="text"
           name="email"
-          className="form__input"
+          className={`
+          form__input
+          ${emailError && "form__input--invalid"}
+          ${(email.length > 4) & email.includes("@") && "form__input--valid"}
+          `}
           autoComplete="off"
           placeholder="Email"
           onChange={this.handleChange}
-          value={this.state.email}
+          value={email}
         />
 
-        <div className="form__errorMessage">{this.state.emailError}</div>
+        <div
+          className={`
+              form__errorMessage
+              ${(email.length > 4) & email.includes("@") && "form__errorMessage--hide"}
+              `}
+        >
+          {emailError}
+        </div>
 
         <input
           type="password"
           name="password"
-          className="form__input"
+          className={`
+          form__input 
+          ${passwordError && "form__input--invalid"}
+          ${password.length > 5 && "form__input--valid"}
+          `}
           autoComplete="off"
           placeholder="Password"
           onChange={this.handleChange}
-          value={this.state.password}
+          value={password}
         />
-        <div className="form__errorMessage">{this.state.passwordError}</div>
+
+        <div
+          className={`
+              form__errorMessage
+              ${password.length > 5 && "form__errorMessage--hide"}
+              `}
+        >
+          {passwordError}
+        </div>
 
         <Button choice="submit">claim your free trial</Button>
         <div className="form__terms">
