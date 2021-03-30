@@ -73,12 +73,16 @@
 
 .form__input {
   height: 5.6rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3px;
   padding-left: 1rem;
   border: 1px solid var(--color-gray-xlight);
   border-radius: 0.5rem;
   color: var(--color-gray);
   font-family: inherit;
+}
+
+.form__input:not(:first-child) {
+  margin-top: 2rem;
 }
 
 .form__input:focus {
@@ -90,7 +94,17 @@
   color: var(--color-gray-light);
 }
 
+.form__errorMessage {
+  color: var(--color-pink);
+}
+
+.form__errorMessage::after {
+  content: "_";
+  color: transparent;
+}
+
 .btn-submit {
+  margin-top: 2rem;
   height: 5.6rem;
   background-color: var(--color-green);
   color: #fff;
