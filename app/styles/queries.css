@@ -1,0 +1,93 @@
+/* MEDIA QUERY REFERENCE */
+/* 75em; // 1200 / 16 = 75 */
+/* 68.75em; // 1100 / 16 = 68.75 */
+/* 62.5em; // 1000 / 16 = 68.75  */
+/* 57.5em; // 920 / 16 = 56.25 */
+/* 37.5em; // 600 / 16 = 37.5 */
+/* 31.25em; // 500 / 16 = 31.25 */
+
+@media only screen and (max-width: 75em) {
+  .column:first-child {
+    margin-right: 4rem;
+  }
+}
+
+@media only screen and (max-width: 62.5em) {
+  .page-container {
+    flex-direction: column;
+    padding: 5rem;
+  }
+
+  .row {
+    flex-direction: column;
+  }
+
+  .column {
+    flex-basis: 100%;
+  }
+
+  .column:first-child {
+    margin-bottom: 4rem;
+    margin-right: 0;
+  }
+
+  .column:nth-child(2) {
+    /* max-width: 85%; */
+    align-self: center;
+  }
+
+  .heroMessage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroMessage__heading {
+    font-size: 4.4rem;
+    text-align: center;
+  }
+
+  .heroMessage__body {
+    padding: 0;
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 57.5em) {
+  .heroMessage__heading span {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .page-container {
+    padding: 3rem;
+  }
+
+  .row {
+    align-items: center;
+  }
+
+  .heroMessage__heading {
+    font-size: 4.2rem;
+  }
+
+  .form {
+    padding: 2rem;
+  }
+
+  .form__input:not(:first-child) {
+    margin-top: 1rem;
+  }
+}
+
+@media only screen and (max-width: 31.25em) {
+  .page-container {
+    padding: 3rem;
+  }
+
+  .heroMessage__heading {
+    font-size: 4rem;
+  }
+}
