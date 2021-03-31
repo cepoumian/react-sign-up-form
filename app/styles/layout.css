@@ -13,8 +13,8 @@
   max-width: 114rem;
   display: flex;
   justify-content: space-between;
-
-  min-height: 50rem; /* TESTING */
+  /* TESTING */
+  /* min-height: 50rem; */
 }
 
 .column {
@@ -25,8 +25,8 @@
 
 .column:first-child {
   justify-content: center;
+  margin-right: 2rem;
 }
 
-.column:nth-child(2) {
-  /* margin-left: 5rem; */
-}
+/* .column:nth-child(2) {
+} */
